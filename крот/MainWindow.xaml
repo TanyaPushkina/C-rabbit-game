@@ -1,0 +1,57 @@
+﻿<Window x:Class="крот.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:крот"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FFFC97CF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Новая строка для надписи сверху -->
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Надпись вверху окна -->
+        <TextBlock x:Name="headerText" Text="Добро пожаловать в игру!"
+               Grid.Row="0"
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               FontSize="24" Margin="25,28,0,0" FontWeight="Normal"
+               Foreground="#FFE97070" Height="44" Width="306"/>
+
+        <local:UserControl1 x:Name="Kv"
+                            HorizontalAlignment="Left" Margin="25,97,0,0"
+                            VerticalAlignment="Top" Height="174" Width="214"
+                            RenderTransformOrigin="0.497,0.511" MouseDown="Kv_MouseDown_1"/>
+
+        <!-- Надпись внизу окна -->
+        <TextBlock x:Name="text" Text="Будешь играть?"
+                   HorizontalAlignment="Left" VerticalAlignment="Top"
+                   FontSize="40" Margin="60,340,0,0" RenderTransformOrigin="0.623,1.039" Height="72" Width="314" FontFamily="Arial" FontWeight="Normal" Foreground="#FFA83C3C" Cursor="Pen">
+            <TextBlock.Effect>
+                <BlurEffect/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <!-- Кнопка 1 -->
+        <Button x:Name="knopka1" Grid.Row="0" Content="Да" Margin="400,346,271,0"
+    VerticalAlignment="Top" Height="50" BorderBrush="#FFCC5151" Background="#FFD8A7A7" FontSize="16" FontFamily="Bell MT" FontWeight="Bold" Click="knopka1_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <Button x:Name="knopka2" Grid.Row="0" Content="Нет" Margin="612,356,61,0"
+    VerticalAlignment="Top" Height="40" Background="#FFDEA38E" FontSize="16" FontFamily="Segoe UI Variable Display Semibold" FontWeight="Bold" BorderBrush="#FFF76767"  RenderTransformOrigin="0.499,0.514" Click="knopka2_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <TextBlock x:Name="headerText_Copy" Text="Если нажали на Да, то можно нажать на зайчика!"
+            Grid.Row="0"
+            HorizontalAlignment="Left" VerticalAlignment="Top" Margin="372,307,0,0" FontWeight="Normal"
+            Foreground="#FFE97070" Height="44" Width="418" FontFamily="Arial Black" FontSize="14"/>
+
+    </Grid>
+</Window>
